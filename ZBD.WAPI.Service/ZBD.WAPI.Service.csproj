@@ -183,6 +183,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\BusesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -276,6 +277,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZBD.WAPI.DatabaseServices\ZBD.WAPI.DatabaseServices.csproj">
+      <Project>{3B520CBE-C41F-4FCA-8088-02D856118058}</Project>
+      <Name>ZBD.WAPI.DatabaseServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZBD.WAPI.IServices\ZBD.WAPI.IServices.csproj">
+      <Project>{4AC4F990-CABD-4A7D-BB29-4A1D7ED6769E}</Project>
+      <Name>ZBD.WAPI.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZBD.WAPI.Models\ZBD.WAPI.Models.csproj">
+      <Project>{18845BFA-7E61-4B4B-844E-E590EB834DDE}</Project>
+      <Name>ZBD.WAPI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

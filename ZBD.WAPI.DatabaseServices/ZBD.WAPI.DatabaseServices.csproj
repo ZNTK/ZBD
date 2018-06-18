@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseBusService.cs" />
+    <Compile Include="DatabaseBusesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +68,10 @@
     <ProjectReference Include="..\ZBD.WAPI.IServices\ZBD.WAPI.IServices.csproj">
       <Project>{4AC4F990-CABD-4A7D-BB29-4A1D7ED6769E}</Project>
       <Name>ZBD.WAPI.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZBD.WAPI.Models\ZBD.WAPI.Models.csproj">
+      <Project>{18845BFA-7E61-4B4B-844E-E590EB834DDE}</Project>
+      <Name>ZBD.WAPI.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBusService.cs" />
+    <Compile Include="IBusesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZBD.WAPI.Models\ZBD.WAPI.Models.csproj">
+      <Project>{18845BFA-7E61-4B4B-844E-E590EB834DDE}</Project>
+      <Name>ZBD.WAPI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
