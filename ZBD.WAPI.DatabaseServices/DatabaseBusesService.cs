@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ZBD.WAPI.IServices;
 using ZBD.WAPI.Models;
+using static MongoDB.Bson.Serialization.BsonSerializationContext;
 
 namespace ZBD.WAPI.DatabaseServices
 {
@@ -43,17 +44,24 @@ namespace ZBD.WAPI.DatabaseServices
 
         public Bus Get(string name)
         {
-            throw new NotImplementedException();
+            var busesCollection = mongoDatabase.GetCollection<Bus>("buses").AsQueryable();
+
+            return busesCollection.FirstOrDefault(b => b.Name == name);
         }
 
         public void Remove(Guid id)
         {
-            throw new NotImplementedException();
+            var busesCollection = mongoDatabase.GetCollection<Bus>("buses");
+            busesCollection.DeleteOne<Bus>(b => b.Id == id);
         }
 
         public void Update(Bus bus)
         {
-            throw new NotImplementedException();
+            var busesCollection = mongoDatabase.GetCollection<Bus>("buses");
+
+            busesCollection.ReplaceOne(
+                Builders<Bus>.Filter.Eq(x => x.Id, bus.Id),
+                bus);
         }
     }
 }

@@ -8,6 +8,10 @@ namespace ZBD.WAPI.Models
 {
     public class Bus : Base
     {
+        public Bus()
+        {
+
+        }
         public Guid Id { get; set; }
 
         public string Name { get; set; }
